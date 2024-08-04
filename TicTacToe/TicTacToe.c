@@ -82,6 +82,7 @@ void playVsComputer() {
 	int counter = 0;
 	int userChoice = 0;
 	int resultExists = 1;
+	int isSmallNum = 1;
 
 	printBoard(board);
 	printf("\n");
@@ -112,14 +113,20 @@ void playVsComputer() {
 			}
 		}
 		else { //computer turn
-			printf("\n\n----------------------\n");
+			printf("\n\n---------------------------\n");
 			printf("| ");
 			printf("System:| Computer turn |\n");
-			printf("----------------------");
+			printf("---------------------------");
 
 			for (int i = 0; i < 9; i++) {
 				if (board[i] != 'X' && board[i] != 'O') {
-					board[i] = 'O';
+					if (userInputNumber >= 0 && userInputNumber <= 4) {
+						board[i] = 'O';
+					}
+					else if (userInputNumber >= 5 && userInputNumber <= 8) {
+						board[8 - i] = 'O';
+					}
+
 					isPlayer = 1;
 					printBoard(board);
 					break;
