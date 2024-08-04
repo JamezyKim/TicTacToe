@@ -1,10 +1,12 @@
 ﻿  TicTacToe.c
 C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(69,2): warning C4098: 'instruction': 'void' function returning a value
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(140,5): warning C4098: 'playVsComputer': 'void' function returning a value
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(79,7): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(81,7): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(80,7): warning C4101: 'comNumber': unreferenced local variable
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(205,7): warning C4098: 'playVsHuman': 'void' function returning a value
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(217,2): warning C4098: 'playVsHuman': 'void' function returning a value
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(265,7): warning C4101: 'str': unreferenced local variable
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(132,7): warning C4098: 'playVsHuman': 'void' function returning a value
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(144,2): warning C4098: 'playVsHuman': 'void' function returning a value
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(192,7): warning C4101: 'str': unreferenced local variable
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(361,7): warning C4013: 'winCheckVsComputer' undefined; assuming extern returning int
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(371,5): warning C4098: 'playVsComputer': 'void' function returning a value
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(280,7): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(282,7): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(281,7): warning C4101: 'comNumber': unreferenced local variable
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(383,7): warning C4101: 'str': unreferenced local variable
   TicTacToe.vcxproj -> C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\x64\Debug\TicTacToe.exe
