@@ -82,7 +82,6 @@ void playVsComputer() {
 	int counter = 0;
 	int userChoice = 0;
 	int resultExists = 1;
-	int computerTurn = 1;
 
 	printBoard(board);
 	printf("\n");
@@ -100,57 +99,49 @@ void playVsComputer() {
 
 				return;
 			}
+
+			if (userInputNumber >= 0 && userInputNumber <= 8) {
+				validateResult = validate(board, userInputNumber);
+				if (validateResult == 1) {
+					if (isPlayer == 1) {
+						board[userInputNumber] = 'X';
+						isPlayer = 0;
+					}
+					printBoard(board);
+				}
+			}
 		}
-		else {
+		else { //computer turn
 			printf("\n\n----------------------\n");
 			printf("| ");
 			printf("System:| Computer turn |\n");
 			printf("----------------------");
-		}
 
-		if (userInputNumber >= 0 && userInputNumber <= 8) {
-			validateResult = validate(board, userInputNumber);
-			if (validateResult == 1) {
-				if (isPlayer == 1) {
-					board[userInputNumber] = 'X';
-					isPlayer = 0;
+			for (int i = 0; i < 9; i++) {
+				if (board[i] != 'X' && board[i] != 'O') {
+					board[i] = 'O';
+					isPlayer = 1;
+					printBoard(board);
+					break;
 				}
-				printBoard(board);
 			}
 
+		}
+		if (winCheck(board) == 1) {
+			char continueGame[100];
+			printf("The game has ended. Do you want to play again? \nIf you do, please press 1, or 0 to exit: ");
+			scanf_s("%s", &continueGame, (unsigned int)sizeof(continueGame));
+
+			if (strcmp(continueGame, "1") == 0) {
+				reset(board);
+			}
 			else {
-
-				while (computerTurn == 1) {
-					if (board[userChoice] != 'X' && board[userChoice] != 'O') {
-						comNumber[counter] = board[userChoice];
-						userChoice++;
-					}
-					counter++;
-					if (counter > 8) {
-						computerTurn = 0;
-					}
-				}
-
-				comChoice = comNumber[0];
-				board[comChoice] = 'O';
-				isPlayer = 1;
-
-				/*for (int i = 0; i < 9; i++) {
-					if (board[i] != 'X' && board[i] != 'O') {
-						comNumber[i] = board[i];
-					}
-
-				}*/
-				printBoard(board);
-
-				if (resultExists != 1) {
-					printf("\nThe space does not exist\n");
-					return;
-				}
-
-				printf("\n");
+				printf("See you next time.");
+				return 0;
 			}
 		}
+
+		printf("\n");
 	}
 }
 
@@ -351,3 +342,4 @@ int winCheck(char* board) {
 
 	return 0;
 }
+
