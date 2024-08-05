@@ -101,7 +101,6 @@ void playVsHuman() {
 
 		userInputNumber = atoi(userInput); //"4" -> 4
 		if (userInputNumber == -1) {
-
 			return;
 		}
 
@@ -126,6 +125,8 @@ void playVsHuman() {
 
 					if (strcmp(continueGame, "1") == 0) {
 						reset(board);
+						isRedPlayer = 1;
+						printBoard(board);
 					}
 					else {
 						printf("See you next time.");
@@ -181,6 +182,7 @@ void reset(char* board) {
 		board[counter] = (char)(counter + 48);
 		counter++;
 	}
+	int isRedPlayer = 1;
 	printf("The game started again. Good luck!");
 }
 
@@ -207,7 +209,7 @@ int winCheck(char* board) {
 	}
 
 	printf("\n");
-	printf("-----------------\n");
+	printf("----------------------\n");
 	printf("|");
 	printf("Red Status : ");
 
@@ -218,10 +220,10 @@ int winCheck(char* board) {
 		printf("%c ", redPlayer[i]);
 	}
 	printf(" \n");
-	printf("-----------------");
+	printf("----------------------");
 
 	printf("\n");
-	printf("-----------------\n");
+	printf("----------------------\n");
 	printf("|");
 	printf("Blue Status: ");
 
@@ -232,7 +234,7 @@ int winCheck(char* board) {
 		printf("%c ", bluePlayer[i]);
 	}
 	printf("\n");
-	printf("-----------------\n\n");
+	printf("----------------------\n\n");
 
 	counter = 0;
 	while (counter < 8) {
@@ -261,7 +263,7 @@ int winCheck(char* board) {
 		}
 
 		if (blueCount + redCount == 9) {
-			printf("\nDraw. Play the game again ");
+			printf("Draw. Play the game again \n");
 			reset(board);
 		}
 		counter++;
@@ -365,6 +367,7 @@ void playVsComputer() {
 
 			if (strcmp(continueGame, "1") == 0) {
 				reset(board);
+
 			}
 			else {
 				printf("See you next time.");
