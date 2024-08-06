@@ -1,15 +1,45 @@
+//Author: Yuntae Kim
+//Date: 2024/8/6
+//<summary>This program enable user to play TicTacToe. The user can play with the other player or with the computer.<summary>
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
+#include <string.h>
 
-
+//<Summary><Summary>
+//<param name=""><param>
+//<return><return>
 void printBoard(char* board);
+//<Summary><Summary>
+//<param name=""><param>
+//<return><return>
 int validate(board, userInput);
-void reset(char* board);
+//<Summary><Summary>
+//<param name=""><param>
+//<return><return>
+int reset(char* board);
+//<Summary><Summary>
+//<param name=""><param>
+//<return><return>
 int winCheck(char* board);
+//<Summary><Summary>
+//<param name=""><param>
+//<return><return>
 void playVsHuman();
+//<Summary><Summary>
+//<param name=""><param>
+//<return><return>
 void playVsComputer();
+//<Summary><Summary>
+//<param name=""><param>
+//<return><return>
 void instruction();
+//<Summary><Summary>
+//<param name=""><param>
+//<return><return>
+void checkDraw(char*board);
 
 
 int main() {
@@ -46,7 +76,11 @@ int main() {
 }
 
 
-
+/// <summary>
+/// This function describes about TicTacToe
+/// </summary>
+/// <param></param>
+/// <returns></returns>
 void instruction() {
 	int userAnswer = 0;
 	char doesUserUnderstand[10];
@@ -176,7 +210,7 @@ int validate(char* board, int userInput) {
 }
 
 
-void reset(char* board) {
+int reset(char* board) {
 	int counter = 0;
 	while (counter < 9) {
 		board[counter] = (char)(counter + 48);
@@ -184,13 +218,14 @@ void reset(char* board) {
 	}
 	int isRedPlayer = 1;
 	printf("The game started again. Good luck!");
+	return isRedPlayer;
 }
 
 
 int winCheck(char* board) {
 	char* winCases[8] = { "012","345","678","036","147","258","048","246" };
-	char redPlayer[100] = { '0' };
-	char bluePlayer[100] = { '0' };
+	char redSubString[100] = { '0' };
+	char blueSubString[100] = { '0' };
 	char str[1];
 	int redIndex = 0;
 	int blueIndex = 0;
@@ -198,11 +233,11 @@ int winCheck(char* board) {
 
 	while (counter < 9) {
 		if (board[counter] == 'X') {
-			redPlayer[redIndex] = (char)(counter + 48);
+			redSubString[redIndex] = (char)(counter + 48);
 			redIndex++;
 		}
 		else if (board[counter] == 'O') {
-			bluePlayer[blueIndex] = (char)(counter + 48);
+			blueSubString[blueIndex] = (char)(counter + 48);
 			blueIndex++;
 		}
 		counter++;
@@ -214,10 +249,10 @@ int winCheck(char* board) {
 	printf("Red Status : ");
 
 	for (int i = 0; i < redIndex; i++) {
-		if (redPlayer[i] == '\0') {
+		if (redSubString[i] == '\0') {
 			break;
 		}
-		printf("%c ", redPlayer[i]);
+		printf("%c ", redSubString[i]);
 	}
 	printf(" \n");
 	printf("----------------------");
@@ -228,43 +263,33 @@ int winCheck(char* board) {
 	printf("Blue Status: ");
 
 	for (int i = 0; i < blueIndex; i++) {
-		if (bluePlayer[i] == '\0') {
+		if (blueSubString[i] == '\0') {
 			break;
 		}
-		printf("%c ", bluePlayer[i]);
+		printf("%c ", blueSubString[i]);
 	}
 	printf("\n");
 	printf("----------------------\n\n");
 
+	char* redResult = NULL;
+	char* blueResult = NULL;
 	counter = 0;
 	while (counter < 8) {
-		if (strcmp(redPlayer, winCases[counter]) == 0) {
-
-			printf("\nCongrtualtion! Red won.\n");
+		redResult = strstr(redSubString, winCases[counter]);
+		blueResult = strstr(blueSubString, winCases[counter]);
+		if (redResult) {
+			printf("\nCongrtualtion! Red won.\n\n");
+			printBoard(board);
 			return 1;
 		}
-		else if (strcmp(bluePlayer, winCases[counter]) == 0) {
-			printf("\nCongratualation! Blue won.\n");
+		else if (blueResult) {
+			printf("\nCongratualation! Blue won.\n\n");
+			printBoard(board);
 			return 1;
 		}
-		counter++;
-	}
-
-	counter = 0;
-	int redCount = 0;
-	int blueCount = 0;
-	while (counter < 9) {
-
-		if (board[counter] == 'X') {
-			redCount++;
-		}
-		else if (board[counter] == 'O') {
-			blueCount++;
-		}
-
-		if (blueCount + redCount == 9) {
-			printf("Draw. Play the game again \n");
-			reset(board);
+		else {
+			checkDraw(board);
+			printf("\n");
 		}
 		counter++;
 	}
@@ -272,6 +297,12 @@ int winCheck(char* board) {
 	return 0;
 }
 
+/*
+* @description: This function enable the user to play the game with computer. 
+After the user type a number, the computer will randomly place it's number on the board
+* @param: none
+* @return: none
+*/
 void playVsComputer() {
 	int validateResult = 0;
 	char userInput[100] = "";
@@ -327,15 +358,19 @@ void playVsComputer() {
 			printf("System:| Computer turn |\n");
 			printf("---------------------------");
 
+			srand(time(0));
 			int isForward = 1;
+			int randomNumber = -1;
+			int min = 0;
+			int max = 9;
+			randomNumber = min + rand() % (max - min + 1);
 
-			if (userInputNumber >= 0 && userInputNumber <= 4) {
+			if (randomNumber >= 0 && randomNumber <= 4) {
 				isForward = 1;
 			}
-			else if (userInputNumber >= 5 && userInputNumber <= 8) {
+			else {
 				isForward = 0;
 			}
-
 
 			if (isForward == 1) {
 				for (int i = 0; i < 9; i++) {
@@ -465,3 +500,26 @@ int winCheckVsComputer(char* board) {
 	return 0;
 }
 
+void checkDraw(char* board) {
+
+	int counter = 0;
+	int blueCount = 0;
+	int redCount = 0;
+
+	while (counter < 9) {
+
+		if (board[counter] == 'X') {
+			redCount++;
+		}
+		else if (board[counter] == 'O') {
+			blueCount++;
+		}
+
+		if (blueCount + redCount == 9) {
+			printf("Draw. Play the game again \n");
+			reset(board);
+		}
+		counter++;
+	}
+
+}
