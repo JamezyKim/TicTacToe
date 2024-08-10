@@ -1,5 +1,6 @@
 //Author: Yuntae Kim
-//Date: 2024/8/6
+//Create date: 2024/8/6
+//Modified date: 2024/8/10
 //<summary>This program enable user to play TicTacToe. The user can play with the other player or with the computer.</summary>
 
 #include <stdio.h>

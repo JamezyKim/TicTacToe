@@ -2,5 +2,7 @@
 *.vsidx
 *.opendb
 *.db
-
-
+*.suo
+*.db-shm
+*.db-wal
+*.gitignore
