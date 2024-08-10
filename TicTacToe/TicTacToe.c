@@ -1,6 +1,6 @@
 //Author: Yuntae Kim
 //Date: 2024/8/6
-//<summary>This program enable user to play TicTacToe. The user can play with the other player or with the computer.<summary>
+//<summary>This program enable user to play TicTacToe. The user can play with the other player or with the computer.</summary>
 
 #include <stdio.h>
 #include <string.h>
@@ -12,32 +12,39 @@
 //<param name="char* board">This param sends the array of board.</param>
 //<return>none</return>
 void printBoard(char* board);
+
 //<summary>This function checks rather a spot has been occupied</summary>
 //<param name="cahr* board">These params send the TicTacToe board and the user input.</param>
 //<param name="int userInput">This param contains the value of the user's choice.</param>
 //<return>The return value represents the condition of validation by 0 or 1.</return>
 int validate(char* board,int userInput);
+
 //<summary>This function reset the game.</summary>
 //<param name="char* board">This param sends the array of board.</param>
 //<return>When the reset function ativates, the game starts with redPlayer's turn(Player's turn if user Vs Computer).</return>
 int reset(char* board);
+
 //<summary>This function loop the array of board and check the winner.</summary>
 //<param name="char* board">This param sends the array of board.</param>
 //<return>The return value is 0, which enable other function to use winCheck function.</return>
 int winCheck(char* board);
+
 //<summary>Red player, Blue player can play the TicTacToe game. The game starts with red player and switch to blue player. 
 // After the game end, the system makes appear the message of which one wins.</summary>
 //<param name="none"></param>
 //<return>none</return>
 void playVsHuman();
+
 //<summary>The user and the computer play the game. After the game end, the system makes appear the message of which one wins.</summary>
 //<param name="none"></param>
 //<return>none</return>
 void playVsComputer();
+
 //<summary>This function describes how to play the game by several steps.</summary>
 //<param name="none"></param>
 //<return>none</return>
 void instruction();
+
 //<summary>This function checks the result of the game. If the board array filled full without anyone to win, the function prints "draw".</summary>
 //<param name="char*board">This param sends the array of board.</param>
 //<return>none</return>
