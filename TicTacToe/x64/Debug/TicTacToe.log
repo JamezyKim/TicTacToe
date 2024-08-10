@@ -1,13 +1,12 @@
 ﻿  TicTacToe.c
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(72,2): warning C4098: 'instruction': 'void' function returning a value
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(136,7): warning C4098: 'playVsHuman': 'void' function returning a value
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(148,2): warning C4098: 'playVsHuman': 'void' function returning a value
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(198,7): warning C4101: 'str': unreferenced local variable
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(323,10): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(360,7): warning C4013: 'winCheckVsComputer' undefined; assuming extern returning int
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(371,5): warning C4098: 'playVsComputer': 'void' function returning a value
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(275,7): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(277,7): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(276,7): warning C4101: 'comNumber': unreferenced local variable
-C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(383,7): warning C4101: 'str': unreferenced local variable
-  TicTacToe.vcxproj -> C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\x64\Debug\TicTacToe.exe
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(103,2): warning C4098: 'instruction': 'void' function returning a value
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(155,25): error C2120: 'void' illegal with all types
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(167,7): warning C4098: 'playVsHuman': 'void' function returning a value
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(179,2): warning C4098: 'playVsHuman': 'void' function returning a value
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(283,4): warning C4098: 'winCheck': 'void' function returning a value
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(288,4): warning C4098: 'winCheck': 'void' function returning a value
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(355,10): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(392,7): warning C4013: 'winCheckVsComputer' undefined; assuming extern returning int
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(403,5): warning C4098: 'playVsComputer': 'void' function returning a value
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(307,7): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
+C:\Users\James Kim\Downloads\SFU\CMPT 125\project2\TicTacToe\TicTacToe\TicTacToe.c(309,7): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'

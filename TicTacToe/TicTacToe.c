@@ -8,37 +8,39 @@
 #include <time.h>
 #include <string.h>
 
-//<Summary><Summary>
-//<param name=""><param>
-//<return><return>
+//<summary>This function print TicTacToe board</summary>
+//<param name="char* board">This param sends the array of board.</param>
+//<return>none</return>
 void printBoard(char* board);
-//<Summary><Summary>
-//<param name=""><param>
-//<return><return>
-int validate(board, userInput);
-//<Summary><Summary>
-//<param name=""><param>
-//<return><return>
+//<summary>This function checks rather a spot has been occupied</summary>
+//<param name="cahr* board">These params send the TicTacToe board and the user input.</param>
+//<param name="int userInput">This param contains the value of the user's choice.</param>
+//<return>The return value represents the condition of validation by 0 or 1.</return>
+int validate(char* board,int userInput);
+//<summary>This function reset the game.</summary>
+//<param name="char* board">This param sends the array of board.</param>
+//<return>When the reset function ativates, the game starts with redPlayer's turn(Player's turn if user Vs Computer).</return>
 int reset(char* board);
-//<Summary><Summary>
-//<param name=""><param>
-//<return><return>
+//<summary>This function loop the array of board and check the winner.</summary>
+//<param name="char* board">This param sends the array of board.</param>
+//<return>The return value is 0, which enable other function to use winCheck function.</return>
 int winCheck(char* board);
-//<Summary><Summary>
-//<param name=""><param>
-//<return><return>
+//<summary>Red player, Blue player can play the TicTacToe game. The game starts with red player and switch to blue player. 
+// After the game end, the system makes appear the message of which one wins.</summary>
+//<param name="none"></param>
+//<return>none</return>
 void playVsHuman();
-//<Summary><Summary>
-//<param name=""><param>
-//<return><return>
+//<summary>The user and the computer play the game. After the game end, the system makes appear the message of which one wins.</summary>
+//<param name="none"></param>
+//<return>none</return>
 void playVsComputer();
-//<Summary><Summary>
-//<param name=""><param>
-//<return><return>
+//<summary>This function describes how to play the game by several steps.</summary>
+//<param name="none"></param>
+//<return>none</return>
 void instruction();
-//<Summary><Summary>
-//<param name=""><param>
-//<return><return>
+//<summary>This function checks the result of the game. If the board array filled full without anyone to win, the function prints "draw".</summary>
+//<param name="char*board">This param sends the array of board.</param>
+//<return>none</return>
 void checkDraw(char*board);
 
 
@@ -75,12 +77,6 @@ int main() {
 	return 0;
 }
 
-
-/// <summary>
-/// This function describes about TicTacToe
-/// </summary>
-/// <param></param>
-/// <returns></returns>
 void instruction() {
 	int userAnswer = 0;
 	char doesUserUnderstand[10];
@@ -202,7 +198,7 @@ int validate(char* board, int userInput) {
 	int boardLength = 9;
 
 	if (board[userInput] == 'X' || board[userInput] == 'O') {
-		return 0;//something is already there
+		return 0;//It has already been occupied
 	}
 	else {
 		return 1;//empty
@@ -293,16 +289,10 @@ int winCheck(char* board) {
 		}
 		counter++;
 	}
-
 	return 0;
 }
 
-/*
-* @description: This function enable the user to play the game with computer. 
-After the user type a number, the computer will randomly place it's number on the board
-* @param: none
-* @return: none
-*/
+
 void playVsComputer() {
 	int validateResult = 0;
 	char userInput[100] = "";
