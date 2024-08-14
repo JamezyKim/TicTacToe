@@ -18,7 +18,7 @@ void printBoard(char* board);
 //<param name="cahr* board">These params send the TicTacToe board and the user input.</param>
 //<param name="int userInput">This param contains the value of the user's choice.</param>
 //<return>The return value represents the condition of validation by 0 or 1.</return>
-int validate(char* board,int userInput);
+int validate(char* board, int userInput);
 
 //<summary>This function reset the game.</summary>
 //<param name="char* board">This param sends the array of board.</param>
@@ -49,7 +49,7 @@ void instruction();
 //<summary>This function checks the result of the game. If the board array filled full without anyone to win, the function prints "draw".</summary>
 //<param name="char*board">This param sends the array of board.</param>
 //<return>none</return>
-void checkDraw(char*board);
+void checkDraw(char* board);
 
 
 int main() {
@@ -65,6 +65,10 @@ int main() {
 		printf("\nUser's choice: ");
 		scanf_s("%d", &userInput);
 		if (userInput == 1) {
+			printf("Thank you for playing TicTacToe 'play Vs human'.");
+			printf("\n You(red player) are going to play against a blue player.");
+			printf("\n After you choose your block, the turn switches to the blue player.");
+			printf("\nGood luck!");
 			playVsHuman();
 		}
 		else if (userInput == 2) {
@@ -118,6 +122,7 @@ void playVsHuman() {
 
 	printBoard(board);
 	printf("\n");
+
 
 
 	while (1) {
@@ -451,7 +456,7 @@ int winCheckVsComputer(char* board) {
 	printf("----------------------\n");
 	printf("|");
 	printf("Computer Status: ");
-	
+
 
 	for (int i = 0; i < computerIndex; i++) {
 		if (computer[i] == '\0') {

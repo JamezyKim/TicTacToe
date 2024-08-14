@@ -1,13 +1,13 @@
 ﻿  TicTacToe.c
-C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(99,2): warning C4098: 'instruction': 'void' function returning a value
-C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(163,7): warning C4098: 'playVsHuman': 'void' function returning a value
-C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(175,2): warning C4098: 'playVsHuman': 'void' function returning a value
-C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(225,7): warning C4101: 'str': unreferenced local variable
-C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(351,10): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(388,7): warning C4013: 'winCheckVsComputer' undefined; assuming extern returning int
-C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(399,5): warning C4098: 'playVsComputer': 'void' function returning a value
-C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(303,7): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
-C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(305,7): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
-C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(304,7): warning C4101: 'comNumber': unreferenced local variable
-C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(411,7): warning C4101: 'str': unreferenced local variable
-  TicTacToe.vcxproj -> C:\Users\PC\source\repos\TicTacToe\x64\Debug\TicTacToe.exe
+C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(111,2): warning C4098: 'instruction': 'void' function returning a value
+C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(176,7): warning C4098: 'playVsHuman': 'void' function returning a value
+C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(188,2): warning C4098: 'playVsHuman': 'void' function returning a value
+C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(238,7): warning C4101: 'str': unreferenced local variable
+C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(364,10): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(401,7): warning C4013: 'winCheckVsComputer' undefined; assuming extern returning int
+C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(412,5): warning C4098: 'playVsComputer': 'void' function returning a value
+C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(316,7): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
+C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(318,7): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
+C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(317,7): warning C4101: 'comNumber': unreferenced local variable
+C:\Users\PC\source\repos\TicTacToe\TicTacToe\TicTacToe.c(424,7): warning C4101: 'str': unreferenced local variable
+LINK : fatal error LNK1168: cannot open C:\Users\PC\source\repos\TicTacToe\x64\Debug\TicTacToe.exe for writing
