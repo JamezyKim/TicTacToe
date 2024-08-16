@@ -66,9 +66,10 @@ int main() {
 		scanf_s("%d", &userInput);
 		if (userInput == 1) {
 			printf("Thank you for playing TicTacToe 'play Vs human'.");
-			printf("\n You(red player) are going to play against a blue player.");
-			printf("\n After you choose your block, the turn switches to the blue player.");
-			printf("\nGood luck!");
+			printf("\nHere is a brief description.");
+			printf("\n\nYou(red player) are going to play against the blue player.");
+			printf("\nAfter you choose your block, the turn switches to the blue player.");
+			printf("\n\nGood luck!");
 			playVsHuman();
 		}
 		else if (userInput == 2) {
@@ -102,7 +103,7 @@ void instruction() {
 	printf("\nIf you understood, press 'y': ");
 	scanf_s("%s", doesUserUnderstand, (unsigned)_countof(doesUserUnderstand));
 	if (strcmp(doesUserUnderstand, "y") == 0) {
-		printf("\nOK\n");
+		printf("\nOK, let's go back to the first page.\n");
 	}
 	else {
 		printf("\nI'll tell you again.\n");
@@ -123,15 +124,12 @@ void playVsHuman() {
 	printBoard(board);
 	printf("\n");
 
-
-
 	while (1) {
 		if (isRedPlayer == 1) {
 			printf("--------------------\n");
 			printf("|");
 			printf("System:| Red turn |\n");
 			printf("--------------------");
-
 		}
 		else {
 			printf("\n\n----------------------\n");
@@ -139,7 +137,7 @@ void playVsHuman() {
 			printf("System:| Blue turn |\n");
 			printf("----------------------");
 		}
-		printf("\n\n\nWhich number do u want to click?(type -1 for reset): ");
+		printf("\nWhich number do u want to click?(type -1 for reset): ");
 		scanf_s("%s", &userInput, (unsigned int)sizeof(userInput));
 
 		userInputNumber = atoi(userInput); //"4" -> 4
@@ -160,7 +158,7 @@ void playVsHuman() {
 					isRedPlayer = 1;
 				}
 
-				printf("System: The spot you have clicked is %d \n", userInputNumber);
+				printf("System: The spot you have clicked is: %d \n", userInputNumber);
 				if (winCheck(board) == 1) {
 					char continueGame[100];
 					printf("The game has ended. Do you want to play again? \nIf you do, please press 1, or 0 to exit: ");
@@ -252,7 +250,7 @@ int winCheck(char* board) {
 		counter++;
 	}
 
-	printf("\n");
+	printf("\n\n");
 	printf("----------------------\n");
 	printf("|");
 	printf("Red Status : ");
@@ -278,7 +276,7 @@ int winCheck(char* board) {
 		printf("%c ", blueSubString[i]);
 	}
 	printf("\n");
-	printf("----------------------\n\n");
+	printf("----------------------\n");
 
 	char* redResult = NULL;
 	char* blueResult = NULL;
